@@ -11,13 +11,15 @@ if(!isset($_SESSION['lang'])){
 
     }elseif ($_GET['lang']=="es"){
         $_SESSION['lang']= "es";
+
     }else{
         $_SESSION['lang']= "en";
-//        echo 'b';
+
     }
 
-}
-else{
+}elseif (isset($_GET['lang'])&& $_GET['lang']==$_SESSION['lang']){
+    //do nothing
+}else{
     $_SESSION['lang']= "en";
 
 }
@@ -31,3 +33,6 @@ require_once 'languages/'.$_SESSION['lang'].'.php';
 //elseif(!isset($_GET['lang'])){
 //    header('Location: index/lang=us');
 //}
+
+
+?>

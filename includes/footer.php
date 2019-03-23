@@ -183,10 +183,10 @@
                 </div> -->
 			<div class="row footer_contact_row">
 				<div class="col-xl-10 offset-xl-1">
-					<div class="row">
+					<div class="row" data-aos="fade-up" data-aos-delay="200">
 
 						<!-- Footer Contact Item -->
-						<div class="col-xl-4 footer_contact_col">
+						<div class="col-xl-4 footer_contact_col" >
 							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
 								<div class="footer_contact_icon"><img src="images/sign.svg" alt=""></div>
 								<div class="footer_contact_title">give us a call</div>
@@ -200,7 +200,7 @@
 						</div>
 
 						<!-- Footer Contact Item -->
-						<div class="col-xl-4 footer_contact_col">
+						<div class="col-xl-4 footer_contact_col" >
 							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
 								<div class="footer_contact_icon"><img src="images/trekking.svg" alt=""></div>
 								<div class="footer_contact_title">come & drop by</div>
@@ -213,7 +213,7 @@
 						</div>
 
 						<!-- Footer Contact Item -->
-						<div class="col-xl-4 footer_contact_col">
+						<div class="col-xl-4 footer_contact_col" >
 							<div class="footer_contact_item d-flex flex-column align-items-center justify-content-start text-center">
 								<div class="footer_contact_icon"><img src="images/around.svg" alt=""></div>
 								<div class="footer_contact_title">send us a message</div>
@@ -247,6 +247,11 @@ Copyright &copy; <script>document.write(new Date().getFullYear());</script> &nbs
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/custom.js"></script>
+<!--<script src="js/aos.js"></script>-->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 <script>
     $(".dropdown-menu li a").click(function(){

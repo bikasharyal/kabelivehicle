@@ -216,18 +216,18 @@ include_once('includes/header.php');
 
 	<div class="destinations" id="destinations">
 		<div class="container">
-			<div class="row">
+			<div class="row" data-aos="fade-up" data-aos-delay="100">
 				<div class="col text-center">
-					<div class="section_subtitle">simply amazing places</div>
-					<div class="section_title"><h2>Popular Destinations</h2></div>
+					<div class="section_subtitle">find your best suit</div>
+					<div class="section_title"><h2>Popular Vehicle Packages</h2></div>
 				</div>
 			</div>
-			<div class="row destinations_row">
+			<div class="row destinations_row" >
 				<div class="col">
-					<div class="destinations_container item_grid">
+					<div class="destinations_container item_grid" >
 
 						<!-- Destination -->
-						<div class="destination item">
+						<div class="destination item" data-aos="fade-up" data-aos-delay="200">
 							<div class="destination_image">
 								<img src="images/destination_1.jpg" alt="">
 								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
@@ -240,7 +240,7 @@ include_once('includes/header.php');
 						</div>
 
 						<!-- Destination -->
-						<div class="destination item">
+						<div class="destination item" data-aos="fade-up" data-aos-delay="300" >
 							<div class="destination_image">
 								<img src="images/destination_2.jpg" alt="">
 							</div>
@@ -252,7 +252,7 @@ include_once('includes/header.php');
 						</div>
 
 						<!-- Destination -->
-						<div class="destination item">
+						<div class="destination item" data-aos="fade-up" data-aos-delay="400" >
 							<div class="destination_image">
 								<img src="images/destination_3.jpg" alt="">
 							</div>
@@ -264,7 +264,7 @@ include_once('includes/header.php');
 						</div>
 
 						<!-- Destination -->
-						<div class="destination item">
+						<div class="destination item" data-aos="fade-up" data-aos-delay="200">
 							<div class="destination_image">
 								<img src="images/destination_4.jpg" alt="">
 							</div>
@@ -276,7 +276,7 @@ include_once('includes/header.php');
 						</div>
 
 						<!-- Destination -->
-						<div class="destination item">
+						<div class="destination item"  data-aos="fade-up" data-aos-delay="300">
 							<div class="destination_image">
 								<img src="images/destination_5.jpg" alt="">
 							</div>
@@ -288,7 +288,7 @@ include_once('includes/header.php');
 						</div>
 
 						<!-- Destination -->
-						<div class="destination item">
+						<div class="destination item" data-aos="fade-up" data-aos-delay="400">
 							<div class="destination_image">
 								<img src="images/destination_6.jpg" alt="">
 							</div>
@@ -304,6 +304,8 @@ include_once('includes/header.php');
 			</div>
 		</div>
 	</div>
+
+
 
 	<!-- Testimonials
 

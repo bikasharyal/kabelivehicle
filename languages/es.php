@@ -21,7 +21,7 @@ $navItems = array(
 
 $lang= array(
     "title" => "Kabeli Inquilinos",
-    "login" => "Iniciar sesión",
-    "logout" => "Cerrar sesión",
-    "register" => "Registro"
+    "login" => "El Login",
+    "logout" => "Cerrar Sesión",
+    "register" => "El Registro"
 );
