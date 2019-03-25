@@ -69,16 +69,17 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Vehicles <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo" class="collapse">
                     <li>
-                        <a href="#">View All Vehicles</a>
+                        <a href="vehicle_manage.php">Manage Vehicles</a>
                     </li>
                     <li>
-                        <a href="#">Available Vehicles</a>
+                        <a href="#">View Reserved Vehicles</a>
                     </li>
                     <li>
-                        <a href="#">Booked Vehicles</a>
+                        <a href="#">View Idle Vehicles</a>
                     </li>
                 </ul>
             </li>
+
             <li>
                 <a href="company_info.php"><i class="fa fa-fw fa-desktop"></i>Company Info </a>
             </li>

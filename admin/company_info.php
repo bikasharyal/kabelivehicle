@@ -1,13 +1,32 @@
 <?php include_once('includes/header.php') ?>
+<?php session_start(); ?>
 
 <div id="wrapper">
 
 
     <!-- Navigation -->
-    <?php include_once('includes/navigation.php') ?>
+<?php include_once('includes/navigation.php') ?>
+<?php
+    if(isset($_POST['submit'])){
+
+//print_r($_POST);
+        //echo $_POST['street'];
 
 
+        $query = "UPDATE `company_details` SET `street` = '".$_POST['street']."', `city` ='".$_POST['city']
+            ."', `zip_code` ='".$_POST['zip_code']."', `office_contact_no` ='".$_POST['office_contact_no']
+            ."', `mobile_no` ='".$_POST['mobile_no']."', `email1` ='".$_POST['email1']."', `email2` ='".$_POST['email2']
+            ."' WHERE `company_id` = 'kb'";
+        $edit_company_info = mysqli_query($connection,$query);
 
+        if(!$edit_company_info ){
+            die("QUERY FAILED: ".mysqli_error($connection));
+        }else{
+            $_SESSION['company_update_success'] = 1;
+        }
+    }
+
+    ?>
 
     <div id="page-wrapper">
 
@@ -18,8 +37,8 @@
 
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        Welcome to Admin Page !
-                        <small>Author</small>
+                        Company Information
+                        <small>View and Edit</small>
                     </h1>
 
 
@@ -29,6 +48,13 @@ if($connection){
     //print_r($connection) ;
     $query = "SELECT * FROM company_details";
     $select_company_info = mysqli_query($connection,$query);
+
+    if(isset($_SESSION['company_update_success'])&&$_SESSION['company_update_success']==1){
+            echo "<div class=\"alert alert-success\">
+                <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
+                <strong>Success!</strong> Indicates a successful or positive action.
+                </div>";
+    }
 }
 ?>
 
@@ -43,8 +69,8 @@ if($connection){
                                 <th>Zip Code</th>
                                 <th>Office Contact</th>
                                 <th>Mobile</th>
-                                <th>Email 1</th>
-                                <th>Email 2</th>
+                                <th>Email</th>
+
 
                             </tr>
                             </thead>
@@ -65,8 +91,7 @@ if($connection){
         echo "<td>{$zip}</td>";
         echo "<td>{$office_contact_no}</td>";
         echo "<td>{$mobile_no}</td>";
-        echo "<td>{$email1}</td>";
-        echo "<td>{$email2}</td>";
+        echo "<td>{$email1}, {$email2}</td>";
 
         echo "<tr>";
 
@@ -87,19 +112,7 @@ if($connection){
 
             <div class="col col-xs-6">
 
-<?php
-if(isset($_POST['submit'])){
 
-//print_r($_POST);
-    echo $_POST['street'];
-
-
-
-
-
-}
-
-?>
            <p> <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#edit_form" aria-expanded="false" aria-controls="edit_form">
                 Edit Company Information
             </button></p>
@@ -121,17 +134,17 @@ if(isset($_POST['submit'])){
 
                         <div class="form-group">
                             <label for="">Zip Code</label>
-                            <input type="text" name="zipcode" required="required" value="<?php echo $zip ?>" class="form-control">
+                            <input type="text" name="zip_code" required="required" value="<?php echo $zip ?>" class="form-control">
                         </div>
 
                         <div class="form-group">
                             <label for="">Office Contact Number: </label>
-                            <input type="text" name="office_contact" required="required" value="<?php echo $office_contact_no ?>" class="form-control">
+                            <input type="text" name="office_contact_no" required="required" value="<?php echo $office_contact_no ?>" class="form-control">
                         </div>
 
                         <div class="form-group">
                             <label for="">Mobile Number: </label>
-                            <input type="text" name="mobile" required="required" value="<?php echo $mobile_no ?>" class="form-control">
+                            <input type="text" name="mobile_no" required="required" value="<?php echo $mobile_no ?>" class="form-control">
                         </div>
 
                         <div class="form-group">
