@@ -110,17 +110,16 @@ if($connection){
 
 
 
-            <div class="col col-xs-6">
+         <div class="col col-xs-12 " >
+             <p> <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#edit_form" aria-expanded="false" aria-controls="edit_form">
+                     Edit Company Information
+                 </button></p>
 
-
-           <p> <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#edit_form" aria-expanded="false" aria-controls="edit_form">
-                Edit Company Information
-            </button></p>
             <div class="collapse" id="edit_form">
 
-                <div class="card card-body">
+                <div class="card card-body col-xs-6 col-md-offset-3">
 
-
+                    <h2 align="center"><strong>Edit Form</strong></h2></br></br>
                     <form action="" method="post">
                         <input type="hidden" name="id" class="form-control" value="<?php echo $id ?>">
                         <div class="form-group">
@@ -166,7 +165,9 @@ if($connection){
                 </div>
             </div>
 
-            </div>
+          </div>
+
+
 
 
         </div>

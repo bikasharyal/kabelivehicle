@@ -10,7 +10,7 @@
                         <nav class="main_nav">
                             <ul class="d-flex flex-row align-items-start justify-content-start">
                                 <?php $pageCount=0; foreach ($navItems as $item): ++$pageCount; ?>
-                                    <li <?php if ($page == $pageCount): echo "class=\"active\""; $current_pg_link = $item['tlink']; endif?>><a href="<?php echo "{$item['tlink']}?lang={$_SESSION['lang']}"?>"><?php echo $item['title'];?></a></li>
+                                    <li <?php if ($page == $pageCount): echo "class=\"active\""; $current_pg_link = $item['tlink']; endif?>><a href="<?php echo "{$item['tlink']}"?>"><?php echo $item['title'];?></a></li>
                                 <?php endforeach  ?>
                             </ul>
                         </nav>
@@ -30,7 +30,7 @@
 
 
 
-                    <?php if (!isset($_SESSION['g_access_token'])&&!isset($_SESSION['fb_access_token'])):?>
+                    <?php if (!isset($_SESSION['g_access_token'])&&!isset($_SESSION['fb_access_token'])&&!isset($_SESSION['user_token'])):?>
                         <!--  <div class="header_phone ml-auto">
                               <div class="btn-group btn-group-sm" role="group" >
                                   <button  class="btn  btn-outline-light pull-right" data-toggle="modal" data-target="#LoginModal">Login</button>
@@ -49,11 +49,11 @@
                         <!--                            <div class="header_phone ml-auto">-->
                         <!--                                <div class="btn-group btn-group-xs" role="group" >-->
                         <?php if(isset($_SESSION['picture'])):?>
-                            <a href="includes/afterlogin.php"><img src="<?php echo $_SESSION['picture']?>" alt="Avatar" class="avatar" style="vertical-align: middle;width: 25px;height: 25px;border-radius: 50%;" ></a>
+                            <a class="btn-group-sm pull-right" id="ma" href="includes/afterlogin.php"><img src="<?php echo $_SESSION['picture']?>" alt="Avatar" class="avatar" style="vertical-align: middle;width: 25px;height: 25px;border-radius: 50%;" ></a>
                         <?php endif;?>
-                        &nbsp;&nbsp;<a class="ma" href="includes/logout.php"><?php echo $lang['logout'] ?></a>&nbsp;&nbsp;
-
-                        <!--                                </div>-->
+                        <div class="btn-group" >
+                        &nbsp;&nbsp;<a class="btn btn-sm pull-right" id="ma" href="includes/logout.php"><?php echo $lang['logout'] ?></a>&nbsp;&nbsp;
+                        </div>
                         <!--                            </div>-->
                     <?php endif ?>
                     <!--                        <select class="selectpicker"  id="trasparent-select" data-width="fit" >-->
@@ -61,19 +61,23 @@
                     <!--                            <option ><a href="#"><img src="images/es.svg" alt="Espanish-Flag">ES</a></option>-->
                     <!--                        </select>-->
                     <div class="btn-group">
-                        <a class="btn btn-sm dropdown-toggle" id="ma" data-toggle="dropdown" href="#">EN <span class="caret"></span></a>
+                        <a class="btn btn-sm dropdown-toggle" id="ma" data-toggle="dropdown" href="#">
+                        <?php if(isset($_SESSION['lang'])){
+                            echo strtoupper($_SESSION['lang']);
+                        } else{
+                            echo 'EN ';
+                        }
+                        ?>
+                        <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item" ><a href="<?php echo $current_pg_link.'?lang=en'?>"><img src="images/us.svg" alt="US-Flag" style="width:40px; height: 25px;">&nbsp;&nbsp;EN</a></li>
                             <li class="dropdown-item" ><a href="<?php echo $current_pg_link.'?lang=es'?>"><img src="images/es.svg" alt="Espanish-Flag" style="width:40px; height: 25px;">&nbsp;&nbsp;ES</a></li>
-
                         </ul>
                     </div>
-
-                    <div class="header_phone ml-auto">
-                        <div class="btn-group btn-group-sm" role="group" >
-                            <a href="admin/index.php"> <button  class="btn  btn-outline-light pull-right">Admin</button></a>
-                        </div>
-                    </div>
+                  <!--  <select name="" id="" style="background: transparent; border: none;">
+                        <option value="">EN</option>
+                        <option value="">ES</option>
+                    </select> -->
 
                 </div>
 

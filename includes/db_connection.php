@@ -1,4 +1,5 @@
 <?php
+define('BASE_URL','http://localhost/kabeli/');
 $db["db_host"] = "localhost";
 $db["db_user"] = "root";
 $db["db_pass"] = "";

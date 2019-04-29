@@ -2,11 +2,8 @@
 
 <div id="wrapper">
 
-
     <!-- Navigation -->
     <?php include_once ('includes/navigation.php')?>
-
-
 
 
     <div id="page-wrapper">
@@ -36,12 +33,15 @@ if($connection){
 $query="SELECT vehicle_id, name, brand, picture_url from `vehicle`";
     $select_vehicle = mysqli_query($connection,$query);
 //print_r($select_vehicle);
-if(isset($_SESSION['success'])&&$_SESSION['success']==1){
-echo "<div class=\"alert alert-success\">
-<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
-<strong>Success!</strong> Indicates a successful or positive action.
-</div>";
-}
+
+
+//if(isset($_SESSION['success'])&&$_SESSION['success']==1){
+//echo "<div class=\"alert alert-success\">
+//<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
+//<strong>Success!</strong> Indicates a successful or positive action.
+//</div>";
+//}
+
 }
 ?>
 

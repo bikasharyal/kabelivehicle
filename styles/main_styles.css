@@ -556,6 +556,7 @@ section
 /*********************************
 5. Home
 *********************************/
+
 .home
 {
 	width: 100%;
@@ -678,6 +679,7 @@ section
 	width: 300px;
 	height: 40px;
 	background: #FFFFFF;
+	/*background: rgba(255,255,255,0.20);;*/
 	margin-left: auto;
 	margin-right: auto;
 
@@ -694,16 +696,20 @@ section
 {
 	width: 100%;
 	background: #FFFFFF;
+	/*background: rgba(255,255,255,0.20);*/
 	padding-top: 23px;
 	padding-bottom: 15px;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
 	border-radius: 7px;
+
 }
 .search_input
 {
 	height: 50px;
 	background: #f2f5f6;
+	/*background: rgba(0,0,0,0.30);;*/
+
 	border: none;
 	outline: none;
 	padding-left: 17px;
@@ -714,19 +720,19 @@ section
 }
 .search_input_1
 {
-	width: 25%;
+	width: 14%;
 }
 .search_input_2
 {
-	width: 15%;
+	width: 10%;
 }
 .search_input_3
 {
-	width: 15%;
+	width: 9%;
 }
 .search_input_4
 {
-	width: 20%;
+	width: 30%;
 }
 .search_input::-webkit-input-placeholder
 {
@@ -765,18 +771,22 @@ section
 }
 .home_search_button
 {
-	width: 161px;
-	height: 52px;
+	width: 300px;
+	height: 48px;
 	background: #181818;
 	color: #FFFFFF;
 	font-family: 'Oswald', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	text-transform: uppercase;
-	border-radius: 20px;
+
+	/*border-radius: 20px;*/
 	border: none;
 	outline: none;
 	cursor: pointer;
+	/*margin-left: 370px;*/
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
 }
 
 /*********************************
@@ -1117,118 +1127,118 @@ section
 
 }
 
-.newsletter_title
-{
-	font-family: 'Oswald', sans-serif;
-	font-size: 36px;
-	font-weight: 400;
-	color: #FFFFFF;
-	line-height: 1.2;
-}
-.newsletter_subtitle
-{
-	font-family: 'Open Sans', sans-serif;
-	font-size: 18px;
-	color: #FFFFFF;
-	font-weight: 300;
-	margin-top: 18px;
-}
-.newsletter_form_container
-{
-	margin-top: 84px;
-}
-.newsletter_input
-{
-	width: 100%;
-	height: 50px;
-	background: rgba(255,255,255,0.5);
-	border: none;
-	outline: none;
-	padding-left: 22px;
-	color: #FFFFFF;
-}
-.newsletter_input::-webkit-input-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #FFFFFF !important;
-}
-.newsletter_input:-moz-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #FFFFFF !important;
-}
-.newsletter_input::-moz-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #FFFFFF !important;
-} 
-.newsletter_input:-ms-input-placeholder
-{ 
-	font-size: 12px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #FFFFFF !important;
-}
-.newsletter_input::input-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #FFFFFF !important;
-}
-.newsletter_form > div:not(:last-child)
-{
-	margin-right: 15px;
-}
-.newsletter_form > div:first-child
-{
-	width: calc(100% - 176px);
-}
-.newsletter_form > div:first-child > div:first-child
-{
-	width: calc((100% - 15px) * 0.35);
-}
-.newsletter_form > div:first-child > div:last-child
-{
-	width: calc((100% - 15px) * 0.65);
-}
-.newsletter_form > div > div > div
-{
-	position: absolute;
-	left: 0;
-	bottom: -2px;
-	width: 100%;
-	height: 2px;
-	background: #FFFFFF;
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.newsletter_button
-{
-	width: 161px;
-	height: 50px;
-	border-radius: 20px;
-	background: rgba(255,255,255,0.5);
-	font-family: 'Oswald', sans-serif;
-	font-size: 16px;
-	font-weight: 400;
-	color: #FFFFFF;
-	text-transform: uppercase;
-	border: none;
-	outline: none;
-	cursor: pointer;
-}
+/*.newsletter_title*/
+/*{*/
+	/*font-family: 'Oswald', sans-serif;*/
+	/*font-size: 36px;*/
+	/*font-weight: 400;*/
+	/*color: #FFFFFF;*/
+	/*line-height: 1.2;*/
+/*}*/
+/*.newsletter_subtitle*/
+/*{*/
+	/*font-family: 'Open Sans', sans-serif;*/
+	/*font-size: 18px;*/
+	/*color: #FFFFFF;*/
+	/*font-weight: 300;*/
+	/*margin-top: 18px;*/
+/*}*/
+/*.newsletter_form_container*/
+/*{*/
+	/*margin-top: 84px;*/
+/*}*/
+/*.newsletter_input*/
+/*{*/
+	/*width: 100%;*/
+	/*height: 50px;*/
+	/*background: rgba(255,255,255,0.5);*/
+	/*border: none;*/
+	/*outline: none;*/
+	/*padding-left: 22px;*/
+	/*color: #FFFFFF;*/
+/*}*/
+/*.newsletter_input::-webkit-input-placeholder*/
+/*{*/
+	/*font-size: 12px !important;*/
+	/*font-weight: 400 !important;*/
+	/*font-style: italic;*/
+	/*color: #FFFFFF !important;*/
+/*}*/
+/*.newsletter_input:-moz-placeholder*/
+/*{*/
+	/*font-size: 12px !important;*/
+	/*font-weight: 400 !important;*/
+	/*font-style: italic;*/
+	/*color: #FFFFFF !important;*/
+/*}*/
+/*.newsletter_input::-moz-placeholder*/
+/*{*/
+	/*font-size: 12px !important;*/
+	/*font-weight: 400 !important;*/
+	/*font-style: italic;*/
+	/*color: #FFFFFF !important;*/
+/*} */
+/*.newsletter_input:-ms-input-placeholder*/
+/*{ */
+	/*font-size: 12px !important;*/
+	/*font-weight: 400 !important;*/
+	/*font-style: italic;*/
+	/*color: #FFFFFF !important;*/
+/*}*/
+/*.newsletter_input::input-placeholder*/
+/*{*/
+	/*font-size: 12px !important;*/
+	/*font-weight: 400 !important;*/
+	/*font-style: italic;*/
+	/*color: #FFFFFF !important;*/
+/*}*/
+/*.newsletter_form > div:not(:last-child)*/
+/*{*/
+	/*margin-right: 15px;*/
+/*}*/
+/*.newsletter_form > div:first-child*/
+/*{*/
+	/*width: calc(100% - 176px);*/
+/*}*/
+/*.newsletter_form > div:first-child > div:first-child*/
+/*{*/
+	/*width: calc((100% - 15px) * 0.35);*/
+/*}*/
+/*.newsletter_form > div:first-child > div:last-child*/
+/*{*/
+	/*width: calc((100% - 15px) * 0.65);*/
+/*}*/
+/*.newsletter_form > div > div > div*/
+/*{*/
+	/*position: absolute;*/
+	/*left: 0;*/
+	/*bottom: -2px;*/
+	/*width: 100%;*/
+	/*height: 2px;*/
+	/*background: #FFFFFF;*/
+	/*visibility: hidden;*/
+	/*opacity: 0;*/
+	/*-webkit-transition: all 200ms ease;*/
+	/*-moz-transition: all 200ms ease;*/
+	/*-ms-transition: all 200ms ease;*/
+	/*-o-transition: all 200ms ease;*/
+	/*transition: all 200ms ease;*/
+/*}*/
+/*.newsletter_button*/
+/*{*/
+	/*width: 161px;*/
+	/*height: 50px;*/
+	/*border-radius: 20px;*/
+	/*background: rgba(255,255,255,0.5);*/
+	/*font-family: 'Oswald', sans-serif;*/
+	/*font-size: 16px;*/
+	/*font-weight: 400;*/
+	/*color: #FFFFFF;*/
+	/*text-transform: uppercase;*/
+	/*border: none;*/
+	/*outline: none;*/
+	/*cursor: pointer;*/
+/*}*/
 .footer_contact_row
 {
 	margin-top: 80px;
@@ -1282,3 +1292,22 @@ section
 {
 	margin-bottom: 7px;
 }
+
+.ui-timepicker-standard{
+	min-width: 140px !important;
+	z-index: 999 !important;
+}
+
+.ui-timepicker-container{
+	width: 140px !important;
+}
+
+.ui-timepicker, .ui-timepicker-viewport{
+	width: 100% !important;
+}
+
+.ui-timepicker-standard .ui-menu-item{
+	width: 100% !important;
+}
+
+

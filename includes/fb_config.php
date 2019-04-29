@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	require_once "../APIs/FacebookAPI/autoload.php";
+	require_once "../lib/FacebookAPI/autoload.php";
 
 	$FB = new \Facebook\Facebook([
 		'app_id' => '294148051211874',

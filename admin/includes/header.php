@@ -1,6 +1,11 @@
 
 <?php
+session_start();
+if(!isset($_SESSION['admin_token']) && $_SESSION['admin_token']!=true){
+    header("Location: admin_login.php");
+}
 include_once ('../includes/db_connection.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,11 +14,14 @@ include_once ('../includes/db_connection.php');
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>Kabeli Vehicle Admin</title>
+
+    <link rel="icon" href="../images/favicon.png" sizes="16x16"	type="image/png"/>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">

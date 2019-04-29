@@ -76,7 +76,7 @@ if($connection){
 //print_r($connection) ;
 //    $lang = $_GET['lang'];
 
-$query = "SELECT vd.vehicle_id,vd.type, vd.description, vd.lang FROM `vehicle` AS v JOIN `vehicle_description` AS vd ON vd.vehicle_id=v.vehicle_id where v.vehicle_id='{$get_vehicle_id}' ";
+$query = "SELECT vehicle_id,type,description, lang FROM `vehicle_description` where vehicle_id='{$get_vehicle_id}' ";
 
 $select_vehicle = mysqli_query($connection,$query);
 //print_r($select_vehicle);
@@ -100,10 +100,10 @@ $select_vehicle = mysqli_query($connection,$query);
                             while($row = mysqli_fetch_assoc($select_vehicle)){
 
                                 echo "<tr>";
-                                echo "<td>{$row['type'] }</td>";
-                                echo "<td>{$row['description'] }</td>";
+                                echo "<td>".htmlentities($row['type'], ENT_QUOTES, "ISO-8859-1")."</td>";
+                                echo "<td>".htmlentities($row['description'], ENT_QUOTES, "ISO-8859-1")."</td>";
                                 echo "<td>{$row['lang'] }</td>";
-                                echo "<td><a href='edit_vehicle_description.php?id={$row['vehicle_id']},lang={$row['lang']}' class='btn btn-primary'>Edit</a> </td>";
+                                echo "<td><a href='vehicle_description_edit.php?id={$row['vehicle_id']},lang={$row['lang']}' class='btn btn-primary'>Edit</a> </td>";
 
                                 echo "</tr>";
 

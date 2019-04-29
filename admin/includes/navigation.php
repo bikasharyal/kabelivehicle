@@ -12,7 +12,6 @@
 
 
 
-
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
         <li><a href="../index.php">User Index</a></li>
@@ -27,7 +26,7 @@
 
                 <li class="divider"></li>
                 <li>
-                    <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                    <a href="./includes/admin_logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                 </li>
             </ul>
         </li>
@@ -50,19 +49,17 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#package"><i class="fa fa-fw fa-arrows-v"></i> Packages <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="package" class="collapse">
                     <li>
-                        <a href="#">View Packages</a>
+                        <a href="package_manage.php">View Packages</a>
                     </li>
                     <li>
-                        <a href="#">Add Packages</a>
+                        <a href="#">Add Vehicle Package</a>
                     </li>
-                    <li>
-                        <a href="#">Update Packages</a>
-                    </li>
+
                 </ul>
             </li>
 
             <li>
-                <a href="#"><i class="fa fa-fw fa-wrench"></i> Bookings</a>
+                <a href="booking_manage.php"><i class="fa fa-fw fa-wrench"></i> Bookings</a>
             </li>
 
             <li>

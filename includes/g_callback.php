@@ -28,9 +28,18 @@
     $email = $userData['email'];
     $picture_url = $userData['picture'];
 
-//    $query = "INSERT INTO `user_tbl`(`first_name`,`last_name`,`email`,`picture_url`) VALUES ('$first_name','$last_name','$email','$picture_url')";
+    if($connection){
+        $query1 = "SELECT email FROM user_tbl WHERE email = '{$email}'";
 
-//    $result = mysqli_query($connection,$query) or die ("Query Failed" );
+        $result1 = mysqli_query($connection,$query1);
+
+        if(!mysqli_num_rows($result1)){
+
+            $query = "INSERT INTO user_tbl(first_name,last_name,email,picture_url,verification_status)";
+            $query.= " VALUES('{$first_name}','{$last_name}','{$email}','{$picture_url}',1)";
+            $result = mysqli_query($connection,$query) or die ("Query Failed" );
+        }
+    }
 
 
 header('Location: ../index.php');

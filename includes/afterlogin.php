@@ -1,9 +1,9 @@
 <?php
 	session_start();
 
-	if (!isset($_SESSION['g_access_token'])&&!isset($_SESSION['fb_access_token'])){
-		header('Location: login.php');
-		exit();
+	if (!isset($_SESSION['g_access_token'])&&!isset($_SESSION['fb_access_token'])&&!isset($_SESSION['user_token'])){
+		header('Location: ../index.php');
+
 	}
 ?>
 <!doctype html>

@@ -274,11 +274,11 @@
 
 .button
 {
-	width: 800px;
+	width: 179px !important;
 	height: 52px;
-
+	color: white;
 	text-align: center;
-	border-radius: 20px;
+	/*border-radius: 20px;*/
 	cursor: pointer;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -286,8 +286,9 @@
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 
-	background: #3f3c3c;
+	background: #010318;
 	border: solid 2px #181818;
+	padding-left: 5px;
 
 }
 .button a
@@ -313,4 +314,23 @@
 	color: #FFFFFF;
 }
 
+.reserve_pay
+{
+	width: 250px;
+	height: 48px;
+	background: #181818;
+	color: #FFFFFF;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+
+	/*border-radius: 20px;*/
+	border: none;
+	outline: none;
+	cursor: pointer;
+	/*margin-left: 370px;*/
+	/*margin-left: auto;*/
+	/*margin-right: auto;*/
+}
 
