@@ -1,8 +1,5 @@
 <?php
-//session_start();
 $page=1;
-//print_r ($_SESSION);
-//require_once 'includes/nav_array.php';
 include_once('includes/header.php');
 ?>
 
@@ -17,39 +14,39 @@ include_once('includes/header.php');
 
                 <!-- Slide -->
                 <div class="owl-item">
-                    <div class="background_image" style="background-image:url(images/ilove.jpg)"></div>
-                    <div class="home_slider_content_container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="home_slider_content">
-                                        <div class="home_title"><h2><?php echo home_pic_floater ?></h2></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide -->
-                <div class="owl-item">
-                    <div class="background_image" style="background-image:url(images/hm3.jpg)"></div>
-                    <div class="home_slider_content_container">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="home_slider_content">
-                                        <div class="home_title"><h2><?php echo home_pic_floater ?></h2></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide -->
-                <div class="owl-item">
                     <div class="background_image" style="background-image:url(images/hm2.jpg)"></div>
+                    <div class="home_slider_content_container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="home_slider_content">
+                                        <div class="home_title"><h2><?php echo home_pic_floater ?></h2></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide -->
+                <div class="owl-item">
+                    <div class="background_image" style="background-image:url(images/hm4_2.jpg)"></div>
+                    <div class="home_slider_content_container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="home_slider_content">
+                                        <div class="home_title"><h2><?php echo home_pic_floater ?></h2></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide -->
+                <div class="owl-item">
+                    <div class="background_image" style="background-image:url(images/ilove.jpg)"></div>
                     <div class="home_slider_content_container">
                         <div class="container">
                             <div class="row">

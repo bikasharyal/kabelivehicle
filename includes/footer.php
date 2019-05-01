@@ -22,7 +22,7 @@
 								<div class="footer_contact_title"><?php echo call_us ?></div>
 								<div class="footer_contact_list">
 									<ul>
-										<li><?php echo office_landline ?> : &nbsp +977 - <?php  echo $info_row['office_contact_no']; ?></li>
+										<li><?php echo office_landline ?> : &nbsp; +977 - <?php  echo $info_row['office_contact_no']; ?></li>
 										<li><?php echo mobile ?> :&nbsp +977 - <?php  echo $info_row['mobile_no']; ?></li>
 									</ul>
 								</div>
@@ -61,8 +61,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="col text-center" style="color: black !important;">
-Copyright &copy; <script>document.write(new Date().getFullYear());</script> &nbsp;Kabeli Vehicle Tours Service Pvt. Ltd. | Regards to <a style="color: gray !important;" id="ma" href="https://colorlib.com" target="_blank">Colorlib</a>
+		<div class="col text-center" style="color: lightgray !important;">
+Copyright &copy; <script>document.write(new Date().getFullYear());</script> &nbsp;Kabeli Vehicle Tours Service Pvt. Ltd. | Theme By <a style="color: lightgray !important;" id="ma" href="https://colorlib.com" target="_blank">Colorlib</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We Accept <img src="./images/stripe.png" style="height: 70px; width: 250px; " alt="">
         </div>
 	</footer>
 <!--    --><?php

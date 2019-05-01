@@ -16,14 +16,12 @@ if($connection){
             // getting user details from database
             $u_query="SELECT first_name, last_name, email FROM user_tbl WHERE id = {$user_id}";
             $result = mysqli_query($connection,$u_query);
-
             $row = mysqli_fetch_assoc($result);
             $name = $row['first_name']." ".$row['last_name'];
-            $email = $row['email'];
 
             // Creating Mail details and subjects.
             $subject = 'Kabeli Vehicle - Booking Confirmation';
-            $email_receiver = $email;
+            $email_receiver = $row['email'];
             $main_message = '<h3>Hello! '.$name.'</h3> </br>';
             $main_message .= 'Thank you for reserving vehicle with us. </br> </br> </br>';
             $main_message .='<p>Best Regards,</p> <p>Kabeli Vehicles Tours Service Pvt.Ltd.</p>';

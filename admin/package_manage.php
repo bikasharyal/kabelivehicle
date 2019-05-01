@@ -33,13 +33,6 @@ if($connection){
 $query="SELECT package_code, vehicle_id, package_title, rate, picture_url from `packages`";
 $select_vehicle = mysqli_query($connection,$query);
 //print_r($select_vehicle);
-
-//if(isset($_SESSION['success'])&&$_SESSION['success']==1){
-//    echo "<div class=\"alert alert-success\">
-//<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
-//<strong>Success!</strong> successful action.
-//</div>";
-//}
 }
 ?>
 
@@ -65,8 +58,12 @@ $select_vehicle = mysqli_query($connection,$query);
                                 echo "<td>{$row['vehicle_id'] }</td>";
                                 echo "<td>{$row['package_title'] }</td>";
                                 echo "<td>{$row['rate'] }</td>";
-                                echo "<td> <img src='{$row['picture_url'] }' alt='' style='width: 280px; height: 200px;'></td>";
-                                echo "<td><a href='package_description.php?id={$row['package_code']}' class='btn btn-primary'>View Description</a> </td>";
+                                echo "<td> <img src='".BASE_URL."{$row['picture_url']}' alt='' style='width: 280px; height: 200px;'></td>";
+                                echo "<td>
+                                        <a href='#' class='btn btn-primary'>Edit</a> 
+                                        <a href='#' class='btn btn-primary'>Delete</a><br><br>
+                                        <a href='package_description.php?id={$row['package_code']}' class='btn btn-primary'>View Description</a>
+                                      </td>";
                                 echo "</tr>";
 
 

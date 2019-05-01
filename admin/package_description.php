@@ -51,7 +51,7 @@ if($connection){
                                 echo "<td>{$row['vehicle_id'] }</td>";
                                 echo "<td>{$row['package_title'] }</td>";
                                 echo "<td>{$row['rate'] }</td>";
-                                echo "<td> <img src='{$row['picture_url'] }' alt='' style='width: 280px; height: 200px;'></td>";
+                                echo "<td> <img src='".BASE_URL."{$row['picture_url'] }' alt='' style='width: 280px; height: 200px;'></td>";
                                 echo "</tr>";
 
                             ?>
@@ -93,7 +93,8 @@ if($connection){
                                 echo "<tr>";
                                 echo "<td>{$row['description'] }</td>";
                                 echo "<td>{$row['lang'] }</td>";
-                                echo "<td><a href='package_description_edit.php?id={$get_package_code},lang={$row['lang']}' class='btn btn-primary'>Edit</a> </td>";
+                                echo "<td><a href='package_description_edit.php?id={$get_package_code},lang={$row['lang']}' class='btn btn-primary'>Edit</a>
+                                <a href='package_description_edit.php?id={$get_package_code},lang={$row['lang']}' class='btn btn-primary'>Delete</a> </td>";
 
                                 echo "</tr>";
 

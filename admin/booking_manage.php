@@ -14,8 +14,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">
-                        Vehicle Management
-                        <small>All Vehicles</small>
+                        Booking Management
+                        <small>All Bookings</small>
                     </h1>
 
                     <div class="col-xs-12">
@@ -49,6 +49,7 @@
                             <tr>
                                 <th>User ID</th>
                                 <th>Vehicle ID</th>
+                                <th>Package ID</th>
                                 <th>Pick Up Address</th>
                                 <th>Pickup Date</th>
                                 <th>Pickup Time</th>
@@ -68,6 +69,11 @@
                                 echo "<tr>";
                                 echo "<td>{$row['user_id'] }</td>";
                                 echo "<td>{$row['vehicle_id'] } </td>";
+                                if($row['package_code']==null){
+                                    echo "<td>Not a Package</td>";
+                                }else{
+                                    echo "<td>{$row['package_code'] } </td>";
+                                }
                                 echo "<td>{$row['pickup_city']}, {$row['pickup_street'] }</td>";
                                 echo "<td>{$row['pickup_date'] }</td>";
                                 echo "<td>{$row['pickup_time'] }</td>";
@@ -80,7 +86,7 @@
                                 echo "<td>";if($row['booking_status']==1): echo "Confirmed"; else: echo "Pending"; endif; echo"</td>";
 
                                 echo "<td><a onclick='return checkBooking()' href='booking_confirmation.php?id={$row['booking_id']}&u_id={$row['user_id']}' class='btn btn-primary'>Confirm Booking</a>
-                                     <a href='booking_confirmation.php?user_id={$row['user_id']}' class='btn btn-primary'>View Customer</a>
+                                     <br><br><a href='booking_confirmation.php?user_id={$row['user_id']}' class='btn btn-primary'>View Customer</a>
                                      </td>";
                                 echo "</tr>";
                             }

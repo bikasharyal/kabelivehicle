@@ -58,7 +58,7 @@ if($connection){
                                     echo "<td>{$row['vehicle_id'] }</td>";
                                     echo "<td>{$row['name'] }</td>";
                                     echo "<td>{$row['brand'] }</td>";
-                                    echo "<td> <img src='{$row['picture_url'] }' alt='' style='width: 280px; height: 200px;'></td>";
+                                    echo "<td> <img src='".BASE_URL."{$row['picture_url'] }' alt='' style='width: 280px; height: 200px;'></td>";
                                 echo "</tr>";
 
                             }
@@ -103,7 +103,8 @@ $select_vehicle = mysqli_query($connection,$query);
                                 echo "<td>".htmlentities($row['type'], ENT_QUOTES, "ISO-8859-1")."</td>";
                                 echo "<td>".htmlentities($row['description'], ENT_QUOTES, "ISO-8859-1")."</td>";
                                 echo "<td>{$row['lang'] }</td>";
-                                echo "<td><a href='vehicle_description_edit.php?id={$row['vehicle_id']},lang={$row['lang']}' class='btn btn-primary'>Edit</a> </td>";
+                                echo "<td><a href='vehicle_description_edit.php?id={$row['vehicle_id']},lang={$row['lang']}' class='btn btn-primary'>Edit</a>
+                                          <a href='vehicle_description_edit.php?id={$row['vehicle_id']},lang={$row['lang']}' class='btn btn-primary'>Delete</a> </td>";
 
                                 echo "</tr>";
 

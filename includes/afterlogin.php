@@ -1,10 +1,18 @@
 <?php
-	session_start();
+	@session_start();
 
 	if (!isset($_SESSION['g_access_token'])&&!isset($_SESSION['fb_access_token'])&&!isset($_SESSION['user_token'])){
 		header('Location: ../index.php');
 
 	}
+
+function base64url_decode($plainText) {
+    $base64url = strtr($plainText, '-_,', '+/=');
+    $base64 = base64_decode($base64url);
+    return $base64;
+}
+$user = base64url_decode($_SESSION['user']);
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -47,7 +55,7 @@
 						</tr>
 						<tr>
 							<td>Email</td>
-							<td><?php echo $_SESSION['email']; ?></td>
+							<td><?php echo $user; ?></td>
 						</tr>
 					</tbody>
 				</table>

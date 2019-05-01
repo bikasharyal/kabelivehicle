@@ -29,14 +29,24 @@
 //    }
 
 	$_SESSION['id'] = $userData['id'];
-    $_SESSION['email'] = $userData['email'];
-    //$_SESSION['gender'] = $userData['gender'];
+	//$_SESSION['gender'] = $userData['gender'];
     $_SESSION['picture'] = $userData['picture']['url'];
     $_SESSION['first_name'] = $userData['first_name'];
     $_SESSION['last_name'] = $userData['last_name'];
+
 	$_SESSION['fb_access_token'] = (string) $accessToken;
 
-	$first_name = $userData['first_name'];
+    // username encoding
+    function base64url_encode($plainText) {
+        $base64 = base64_encode($plainText);
+        $base64url = strtr($base64, '+/=', '-_,');
+        return $base64url;
+    }
+    $_SESSION['user'] = base64url_encode($userData['email']);
+
+
+
+    $first_name = $userData['first_name'];
     $last_name = $userData['last_name'];
     $email = $userData['email'];
     $picture_url = $userData['picture']['url'];

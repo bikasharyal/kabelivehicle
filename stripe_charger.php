@@ -5,6 +5,9 @@ $token  = $_POST['stripeToken'];
 $email  = $_POST['stripeEmail'];
 $vehicle_id = $_POST['vehicle_id'];
 $rate = $_POST['rate'];
+if(isset($_POST['p_id'])){
+    $p_id = $_POST['p_id'];
+}
 $customer = \Stripe\Customer::create([
     'email' => $email,
     'source'  => $token,
@@ -24,6 +27,9 @@ $status = $charge->status;
 $bill_url = $charge->receipt_url;
 
 echo "Transaction Id: {$chargeID}</br>";
+if(isset($p_id)){
+   echo "Package Id: ".$p_id."</br>" ;
+}
 echo "Vehicle Id: {$vehicle_id}</br>";
 echo "Transaction Amount: $ {$amount}</br>";
 echo "Transaction Status: {$status}</br>";

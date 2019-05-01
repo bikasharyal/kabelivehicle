@@ -18,6 +18,26 @@ function Get_Company_Info($connection){
     }
 }
 
+function Get_Vehicle_Packages($connection){
+    if($connection){
+        $lang = $_SESSION['lang'];
+        $query="SELECT p.package_code, p.vehicle_id, p.package_title, p.rate, p.picture_url, pd.description, v.name, v.brand, v.no_of_seats from packages AS p JOIN package_description AS pd ON p.package_code = pd.package_code JOIN vehicle AS v ON v.vehicle_id = p.vehicle_id WHERE  pd.lang ='{$lang}' LIMIT 6";
+        $select_package = mysqli_query($connection,$query);
+        return $select_package;
+
+    }
+}
+
+function Get_Vehicle_Packages_where_con($connection,$p_id){
+    if($connection){
+        $lang = $_SESSION['lang'];
+        $query="SELECT p.package_code, p.vehicle_id, p.package_title, p.rate, p.picture_url, pd.description, v.name, v.brand, v.no_of_seats, v.ac_availability, v.air_bag_availability, v.wifi_availability from packages AS p JOIN package_description AS pd ON p.package_code = pd.package_code JOIN vehicle AS v ON v.vehicle_id = p.vehicle_id WHERE p.package_code='{$p_id}' AND pd.lang ='{$lang}' LIMIT 6";
+        $select_package = mysqli_query($connection,$query);
+        return $select_package;
+
+    }
+}
+
 function Get_Vehicle_Info($connection){
     if($connection){
         $lang=$_SESSION['lang'];
@@ -70,20 +90,6 @@ function Get_Vehicle_Where_con($connection, $vehicle_id){
 }
 
 
-function Record_Booking($connection,$user_id,$vehicle_id,$pickup_city,$pickup_street,$pickup_date,$pickup_time,$dropoff_city,$dropoff_street,$dropoff_date,$dropoff_time,$passenger_count){
 
-    if($connection) {
-        $query = "INSERT INTO booking VALUES(null,{$user_id},'{$vehicle_id}','{$pickup_city}','{$pickup_street}','{$pickup_date}','{$pickup_time}','{$dropoff_city}','{$dropoff_street}','{$dropoff_date}','{$dropoff_time}',{$passenger_count},0)";
-
-        $query_result = mysqli_query($connection, $query);
-
-        if (!$query_result) {
-    //        die("Query Error:".mysqli_error($connection));
-            return 0;
-        } else {
-            return 1;
-        }
-    }
-}
 
 ?>

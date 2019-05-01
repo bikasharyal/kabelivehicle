@@ -22,11 +22,12 @@
 {
 	width: 100%;
 	background: #FFFFFF;
-	padding-top: 115px;
+	padding-top: 30px;
 }
 .about_row
 {
-	margin-top: 95px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 .about_content
 {
@@ -109,7 +110,7 @@
 {
 	width: 100%;
 	padding-top: 115px;
-	padding-bottom: 113px;
+	padding-bottom: 115px;
 }
 .why .section_subtitle,
 .why .section_title
@@ -180,12 +181,12 @@
 {
 	width: 100%;
 	background: #FFFFFF;
-	padding-top: 115px;
-	padding-bottom: 67px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 .team_row
 {
-	margin-top: 100px;
+	margin-top: 50px;
 }
 .team_item
 {

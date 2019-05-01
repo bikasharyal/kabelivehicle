@@ -4,6 +4,7 @@
 	if (isset($_GET['code'])) {
 		$token = $gClient->fetchAccessTokenWithAuthCode($_GET['code']);
 		$_SESSION['g_access_token'] = $token;
+
 	} else {
 		echo "You are at google call back page";
 		exit();
@@ -17,11 +18,18 @@
 	$userData = $oAuth->userinfo_v2_me->get();
 
 	$_SESSION['id'] = $userData['id'];
-	$_SESSION['email'] = $userData['email'];
-	$_SESSION['gender'] = $userData['gender'];
 	$_SESSION['picture'] = $userData['picture'];
 	$_SESSION['first_name'] = $userData['givenName'];
 	$_SESSION['last_name'] = $userData['familyName'];
+    // username encoding
+    function base64url_encode($plainText) {
+        $base64 = base64_encode($plainText);
+        $base64url = strtr($base64, '+/=', '-_,');
+        return $base64url;
+    }
+    $_SESSION['user'] = base64url_encode($userData['email']);
+
+
 
     $first_name = $userData['givenName'];
     $last_name = $userData['familyName'];

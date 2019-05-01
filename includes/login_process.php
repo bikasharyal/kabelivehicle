@@ -41,7 +41,17 @@ if(isset($_POST['login'])) {
                 $_SESSION['first_name']= "";
                 $_SESSION['last_name']= "";
                 $_SESSION['picture']= BASE_URL."images/user.png";
-                $_SESSION['email']= $email;
+
+
+                // username encoding
+                function base64url_encode($plainText) {
+                    $base64 = base64_encode($plainText);
+                    $base64url = strtr($base64, '+/=', '-_,');
+                    return $base64url;
+                }
+
+                $_SESSION['user'] = base64url_encode($email);
+
                 header("Location: ../vehicles.php?lg={$lg}");
             }else{
                 $lg = 0;

@@ -2,7 +2,7 @@
 $page=3;
 //require_once 'includes/nav_array.php';
 
-include('includes/header.php'); // ---->> function.php has been called in header.php file.
+include('includes/header.php'); // ---->> function.php has been callesd in header.php file.
 
 $vehicle_results = Get_Vehicle_Info($connection); // calling Get_Vehicle_Info function from function.php
 
@@ -74,7 +74,7 @@ if(mysqli_num_rows($vehicle_results)):
 
                         <div class="destination item">
                             <div class="destination_image">
-                                <img src="<?php echo $vehicle_rows['picture_url']?>" alt="" style="height: 270px ; width: 360px;">
+                                <img src="<?php echo BASE_URL.$vehicle_rows['picture_url']?>" alt="" style="height: 270px ; width: 360px;">
 <!--                                <div class="spec_offer text-center"><a href="#">Special Offer</a></div>-->
                             </div>
                             <div class="destination_content">

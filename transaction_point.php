@@ -128,7 +128,7 @@ if(isset($_POST['info_submit'])){
             <div class="book_clear" style="padding: 10px; margin: 20px">
 
                 <div style= "float: left; height: 300px; width: 550px;">
-                    <img src="<?php echo $selected_vehicle_row['picture_url']; ?>" height="300" alt="">
+                    <img src="<?php echo BASE_URL.$selected_vehicle_row['picture_url']; ?>" height="300" alt="">
                 </div>
                 <div style= "float: left;" >
                     <h5><?php echo $selected_vehicle_row['name']." - ".$selected_vehicle_row['brand']; ?></h5>

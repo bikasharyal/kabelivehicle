@@ -16,72 +16,29 @@ include('includes/header.php')
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <div class="section_subtitle">simply amazing places</div>
+                    <div class="section_subtitle">Kabeli Vehicles Tours Service</div>
                     <div class="section_title"><h2>A few words about us</h2></div>
                 </div>
             </div>
             <div class="row about_row">
                 <div class="col-lg-6">
                     <div class="about_content">
-                        <div class="text_highlight">Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        <div class="text_highlight">
+                                Write Something important here.
+                        </div>
                         <div class="about_text">
-                            <p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet .Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu laoreet ante, sollicitudin volutpat quam. Vestibulum posuere malesuada ultrices. In pulvinar rhoncus lacus at aliquet. Nunc vitae lacus varius, auctor nisi sit amet, consectetur mauris. Curabitur sodales semper est, vel faucibus urna laoreet vel. Ut justo diam, sodales non pulvinar at, vulputate quis neque. Etiam aliquam purus vel ultricies consequat.</p>
+                            <p>Since August 2013, we are providing vehicle in Nepal.</p>
                         </div>
                         <div class="button about_button"><a href="#">read more</a></div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="about_image"><img src="images/about_1.jpg" alt=""></div>
+                    <div class="about_image"><img src="images/about1.jpg" alt=""></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Milestones -->
-
-    <div class="milestones">
-        <div class="container">
-            <div class="row">
-
-                <!-- Milestone -->
-                <div class="col-lg-3 milestone_col">
-                    <div class="milestone text-center">
-                        <div class="milestone_icon"><img src="images/mountain.svg" alt=""></div>
-                        <div class="milestone_counter" data-end-value="17">0</div>
-                        <div class="milestone_text">Online Courses</div>
-                    </div>
-                </div>
-
-                <!-- Milestone -->
-                <div class="col-lg-3 milestone_col">
-                    <div class="milestone text-center">
-                        <div class="milestone_icon"><img src="images/island.svg" alt=""></div>
-                        <div class="milestone_counter" data-end-value="213">0</div>
-                        <div class="milestone_text">Students</div>
-                    </div>
-                </div>
-
-                <!-- Milestone -->
-                <div class="col-lg-3 milestone_col">
-                    <div class="milestone text-center">
-                        <div class="milestone_icon"><img src="images/camera.svg" alt=""></div>
-                        <div class="milestone_counter" data-end-value="11923">0</div>
-                        <div class="milestone_text">Teachers</div>
-                    </div>
-                </div>
-
-                <!-- Milestone -->
-                <div class="col-lg-3 milestone_col">
-                    <div class="milestone text-center">
-                        <div class="milestone_icon"><img src="images/boat.svg" alt=""></div>
-                        <div class="milestone_counter" data-end-value="15">0</div>
-                        <div class="milestone_text">Countries</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
 
     <!-- Why Choose Us -->
 
@@ -90,7 +47,7 @@ include('includes/header.php')
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <div class="section_subtitle">simply amazing places</div>
+<!--                    <div class="section_subtitle">simply amazing places</div>-->
                     <div class="section_title"><h2>Why choose us?</h2></div>
                 </div>
             </div>
@@ -100,7 +57,7 @@ include('includes/header.php')
                 <div class="col-lg-4 why_col">
                     <div class="why_item">
                         <div class="why_image">
-                            <img src="images/why_1.jpg" alt="">
+                            <img src="images/fast_service.jpg" alt="">
                             <div class="why_icon d-flex flex-column align-items-center justify-content-center">
                                 <img src="images/why_1.svg" alt="">
                             </div>
@@ -108,7 +65,7 @@ include('includes/header.php')
                         <div class="why_content text-center">
                             <div class="why_title">Fast Services</div>
                             <div class="why_text">
-                                <p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo.</p>
+                                <p>We are always focus on fast and reliable service. And we will do so with you too.</p>
                             </div>
                         </div>
                     </div>
@@ -118,7 +75,7 @@ include('includes/header.php')
                 <div class="col-lg-4 why_col">
                     <div class="why_item">
                         <div class="why_image">
-                            <img src="images/why_2.jpg" alt="">
+                            <img src="images/great_team.jpg" alt="">
                             <div class="why_icon d-flex flex-column align-items-center justify-content-center">
                                 <img src="images/why_2.svg" alt="">
                             </div>
@@ -126,7 +83,7 @@ include('includes/header.php')
                         <div class="why_content text-center">
                             <div class="why_title">Great Team</div>
                             <div class="why_text">
-                                <p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo.</p>
+                                <p>Our team is very loyal and helpful. You will get more from them then you expected.</p>
                             </div>
                         </div>
                     </div>
@@ -136,7 +93,7 @@ include('includes/header.php')
                 <div class="col-lg-4 why_col">
                     <div class="why_item">
                         <div class="why_image">
-                            <img src="images/why_3.jpg" alt="">
+                            <img src="images/deals.jpg" alt="">
                             <div class="why_icon d-flex flex-column align-items-center justify-content-center">
                                 <img src="images/why_3.svg" alt="">
                             </div>
@@ -144,7 +101,7 @@ include('includes/header.php')
                         <div class="why_content text-center">
                             <div class="why_title">Best Deals</div>
                             <div class="why_text">
-                                <p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo.</p>
+                                <p>We often provide various offers. You can find yours in popular packages.</p>
                             </div>
                         </div>
                     </div>
@@ -160,7 +117,7 @@ include('includes/header.php')
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <div class="section_subtitle">simply amazing places</div>
+                    <div class="section_subtitle">simply amazing team</div>
                     <div class="section_title"><h2>Meet the Team</h2></div>
                 </div>
             </div>

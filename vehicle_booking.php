@@ -29,7 +29,6 @@ require_once('includes/payment_config.php');
         $dropoff_street = mysqli_real_escape_string($connection,$_POST['dropoff_street']);
         $dropoff_date = mysqli_real_escape_string($connection,$_POST['dropoff_date']);
         $dropoff_time = mysqli_real_escape_string($connection,$_POST['dropoff_time']);
-
         $passenger_count = mysqli_real_escape_string($connection,$_POST['passenger_count']);
 
         $booking_data= array(
@@ -60,24 +59,49 @@ require_once('includes/payment_config.php');
         }elseif ($dropoff_date<$pickup_date && $dropoff_date!=$pickup_date ){
             $error ="Drop off date is earlier than pickup date";
 
-        }else{ // Else: Dates are good
+        }elseif ($passenger_count>$selected_vehicle_row['no_of_seats']){
+            $error ="Passenger count cannot be higher than total seat capacity of the vehicle";
+
+        }else{ // Else: Dates and data are good
 
             // Check the vehicle is available for the chosen date or not.
 
             // Insert booking info in the database
 
-                    // $user_id = $_SESSION['user_id'];
-            $user_id = 1;
-            $booking_result = Record_Booking($connection,$user_id,$vehicle_id,$pickup_city,$pickup_street,$pickup_date,$pickup_time,$dropoff_city,$dropoff_street,$dropoff_date,$dropoff_time,$passenger_count);
 
-            if($booking_result){
+            // decoding username
+            function base64url_decode($plainText) {
+                $base64url = strtr($plainText, '-_,', '+/=');
+                $base64 = base64_decode($base64url);
+                return $base64;
+            }
+                $user = base64url_decode($_SESSION['user']);
+
+            if($connection) {
+
+                //getting user id.
+                $query1 = "SELECT id FROM user_tbl WHERE email = '{$user}'";
+
+                $q1_result = mysqli_query($connection,$query1);
+
+                if(mysqli_num_rows($q1_result)){
+                    $row = mysqli_fetch_assoc($q1_result);
+                    $user_id = $row['id'];
+                }
+
+                $query = "INSERT INTO booking VALUES(null,{$user_id},'{$vehicle_id}','{$pickup_city}','{$pickup_street}','{$pickup_date}','{$pickup_time}','{$dropoff_city}','{$dropoff_street}','{$dropoff_date}','{$dropoff_time}',{$passenger_count},0,null)";
+
+                $query_result = mysqli_query($connection, $query);
+
+            }
+            if($query_result){
                 //Booking Success Message
-                $error = "Booking Success! Check your email, confirmation will arrive within 24 working hours.";
+                $msg = "Booking Success! Check your email, confirmation will arrive within 24 working hours.";
 
 
                 // Sending mail to the Admin
                 $subject = 'New Booking Detected!';
-                $main_message = '<h3>Dear Admin!</h3><p> New Booking Request has been recorded, Be Ready to Confirm! </p> </br> <a href="http://localhost/kabeli/admin"> Click here to Go to Admin Page</a>';
+                $main_message = '<h3>Dear Admin!</h3><p> New Booking Request has been recorded, Be Ready to Confirm! </p> </br> <a href="'.BASE_URL.'admin"> Click here to Go to Admin Page</a>';
                 $email_receiver = 'kabelivehicleservice@gmail.com';
 
                 // including mail sender
@@ -118,7 +142,7 @@ require_once('includes/payment_config.php');
         <div class="home_search_title">Give us your details</div>
 
         <div class="home_search_content">
-            <?php if(isset($error)){ echo "<p style='color:red;'>{$error}</p>";} ?>
+            <?php if(isset($error)){ echo "<p style='color:red;'>{$error}</p>";} if(isset($msg)){ echo "<p style='color:green;'>{$msg}</p>";} ?>
             <form autocomplete="off" action="" method="post" class="home_search_form" id="home_search_form">
                 <div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
 
@@ -159,7 +183,7 @@ require_once('includes/payment_config.php');
                 <div class="book_clear" style="padding: 10px; margin: 20px">
 
                     <div style= "float: left; height: 300px; width: 550px;">
-                        <img src="<?php echo $selected_vehicle_row['picture_url']; ?>" height="300" alt="">
+                        <img src="<?php echo BASE_URL.$selected_vehicle_row['picture_url']; ?>" height="300" alt="">
                     </div>
                     <div style= "float: left;" >
                         <h5><?php echo $selected_vehicle_row['name']." - ".$selected_vehicle_row['brand']; ?></h5>

@@ -65,8 +65,12 @@ echo "<tr>";
     echo "<td>{$row['vehicle_id'] }</td>";
     echo "<td>{$row['name'] }</td>";
     echo "<td>{$row['brand'] }</td>";
-    echo "<td> <img src='{$row['picture_url'] }' alt='' style='width: 280px; height: 200px;'></td>";
-    echo "<td><a href='vehicle_description.php?id={$row['vehicle_id']}' class='btn btn-primary'>View Description</a> </td>";
+    echo "<td> <img src='".BASE_URL."{$row['picture_url'] }' alt='' style='width: 280px; height: 200px;'></td>";
+    echo "<td>
+            <a href='#' class='btn btn-primary'>Edit </a>
+           <a href='#' class='btn btn-primary'>Delete </a> <br><br>
+            <a href='vehicle_description.php?id={$row['vehicle_id']}' class='btn btn-primary'>View Description</a>
+            </td>";
 echo "</tr>";
 
 
