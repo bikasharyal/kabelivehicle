@@ -1,6 +1,6 @@
 <?php
 	require_once "g_config.php";
-//    require_once "db_connection.php";
+require_once 'db_connection.php';
 	if (isset($_GET['code'])) {
 		$token = $gClient->fetchAccessTokenWithAuthCode($_GET['code']);
 		$_SESSION['g_access_token'] = $token;
@@ -41,7 +41,7 @@
 
         $result1 = mysqli_query($connection,$query1);
 
-        if(!mysqli_num_rows($result1)){
+        if(mysqli_num_rows($result1)<=0){
 
             $query = "INSERT INTO user_tbl(first_name,last_name,email,picture_url,verification_status)";
             $query.= " VALUES('{$first_name}','{$last_name}','{$email}','{$picture_url}',1)";

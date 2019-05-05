@@ -60,6 +60,9 @@ if(isset($_POST['info_submit'])){
     }elseif ($dropoff_date<$pickup_date && $dropoff_date!=$pickup_date ){
         $error ="Drop off date is earlier than pickup date";
 
+    }elseif ($passenger_count>$selected_vehicle_row['no_of_seats']){
+        $error ="Passenger count cannot be higher than total seat capacity of the vehicle";
+
     }else{ // Else: Dates are good
 
         // Check the vehicle is available for the chosen date or not.

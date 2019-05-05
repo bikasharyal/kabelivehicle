@@ -1,6 +1,6 @@
 <?php
 	require_once "fb_config.php";
-    require_once './db_connection.php';
+    require_once 'db_connection.php';
 	try {
 		$accessToken = $helper->getAccessToken();
 	} catch (\Facebook\Exceptions\FacebookResponseException $e) {
@@ -57,7 +57,7 @@
 
         $result1 = mysqli_query($connection,$query1);
 
-        if(!mysqli_num_rows($result1)){
+        if(mysqli_num_rows($result1) <= 0){
 
             $query = "INSERT INTO user_tbl(first_name,last_name,email,picture_url,verification_status)";
             $query.= " VALUES('{$first_name}','{$last_name}','{$email}','{$picture_url}',1)";

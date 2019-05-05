@@ -19,6 +19,7 @@ if($connection){
             $row = mysqli_fetch_assoc($result);
             $name = $row['first_name']." ".$row['last_name'];
 
+
             // Creating Mail details and subjects.
             $subject = 'Kabeli Vehicle - Booking Confirmation';
             $email_receiver = $row['email'];
@@ -33,14 +34,17 @@ if($connection){
 
             $mailResult = Send_Mail($email_receiver,$subject,$main_message);
 
-//            if ($mailResult) {
-//                $is_mail_sent = 1;
+            if ($mailResult) {
+                $is_mail_sent = 1;
+                header("Location: booking_manage.php");
 //                echo $is_mail_sent; exit();
-//            }else{
-//                $is_mail_sent = 0;
-//                echo $is_mail_sent; exit();
-//            }
-            header("Location: booking_manage.php");
+            }else{
+                $is_mail_sent = 0;
+
+                echo "Something went worong! mail not sent to the customer"; exit();
+            }
+
+
 
         }
 

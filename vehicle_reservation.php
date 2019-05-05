@@ -7,7 +7,6 @@ if(!isset($_SESSION['user_token']) && !isset($_SESSION['fb_access_token']) && !i
 }
 
 
-
 include_once ('includes/header.php'); // function.php has been called in header.php file.
 require_once('includes/payment_config.php');
 

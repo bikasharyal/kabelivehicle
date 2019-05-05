@@ -5,8 +5,8 @@ $page=3;
 include('includes/header.php'); // ---->> function.php has been callesd in header.php file.
 
 $vehicle_results = Get_Vehicle_Info($connection); // calling Get_Vehicle_Info function from function.php
-
 ?>
+
 
 <!-- Body -->
 <!--<div  style="weight:100%;height:130px;background-color: #174f86;" >
@@ -91,11 +91,15 @@ if(mysqli_num_rows($vehicle_results)):
                                         <li>With Chauffer: Yes</li>
                                     </ul>
                                 </div>
-<!--                                 <button class="btn btn-md btn-info" style="width: 160px;">Book Now</button>-->
+<!--                                    // previous buttons-->
                                 </br><div style= "float: left;"><a href="vehicle_booking.php?v_id=<?php echo $vehicle_rows['vehicle_id'];?>"> <button class="button load_more_button"> Reserve Now </button></a></div>
                                 <div style= "float: left;"><a href="transaction_point.php?v_id=<?php echo $vehicle_rows['vehicle_id'];?>"> <button class="button load_more_button"> Rent Now </button></a></div>
-<!--                                <div class="button load_more_button"><a href="#" data-toggle="modal" data-target="#bookingModal">Book Now</a></div>-->
+<!--                                <div class="button load_more_button"><a class="open_bi_model" data-toggle="modal" data-id="--><?php //echo $vehicle_rows['vehicle_id'] ?><!--" href="#">Reserve Now</a></div>-->
+
                                 <div style="clear:both;"></div>
+
+<!--                                </br><div ><a href="vehicle_reservation.php?v_id=--><?php //echo $vehicle_rows['vehicle_id'];?><!--"> <button style= "width:360px!important;" class="button load_more_button"> Reserve Now </button></a></div>-->
+
                             </div>
                         </div>
 <?php endwhile;?>
@@ -117,7 +121,11 @@ if(mysqli_num_rows($vehicle_results)):
 if(isset($_GET['reg_er_msg'])&& isset($_GET['reg_suc_msg'])){$reg_er_msg = $_GET['reg_er_msg'];$reg_suc_msg = $_GET['reg_suc_msg'];}
 if(isset($_GET['lg_er_msg'])){$lg_er_msg = $_GET['lg_er_msg'];}
 
+
+
 include('includes/footer.php');
+
+
 
 if(isset($_GET['reg'])):
     if ($_GET['reg'] == 0 || $_GET['reg'] == 1): ?>
